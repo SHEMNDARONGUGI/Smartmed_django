@@ -1,0 +1,36 @@
+{% extends 'starter-page.html' %}
+{%load static%}
+
+{% block body %}
+
+<br>
+<table class="table table-info m-3">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Subject</th>
+        <th>Message</th>
+        <th>Action</th>
+    </tr>
+
+    
+    {% for y in contact %}
+
+    <tr>
+        <td>{{y.name}}</td>
+        <td>{{y.email}}</td>
+        <td>{{y.subject}}</td>
+        <td>{{y.message}}</td>
+        <td>
+            <a href="" class="btn btn-warning">EDIT</a>
+            <a href=""  class="btn btn-danger">DELETE</a>
+            <a href="" class="btn btn-success">PAY</a>
+        </td>
+    </tr>
+        
+    {% endfor %}
+        
+</table>
+    
+{% endblock %}
+    
